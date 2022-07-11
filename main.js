@@ -1,14 +1,14 @@
-const Discord = require('discord.js');
-//const client = new Discord.Client();
-
-
-// client.once('ready', () => {
-//     console.log('Bot is online');
-// })
+const settings = require('./settings.json');
 const { Client, Intents } = require('discord.js');
-const client = new Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES] });
-client.once('ready', () => {
-    console.log('Bot is online');
-})
+const bot = new Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES] });
 
-client.login('OTk2MDE3OTk3OTIxNjY1MDc1.GDiV9P.lPHpkkCM7iRTDJyFvfotIlph8EeH76HZK2Ptnk');
+bot.on('ready', () => {
+   console.log("READY!")
+});
+
+bot.on('messageCreate', message => {  
+    if (message.content.startsWith(settings.prefix + "ping")) {
+      message.reply('pong!');
+    }
+  });
+bot.login(settings.discord_token);

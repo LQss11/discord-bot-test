@@ -15,3 +15,5 @@ to launch bot run
 ```sh
 node .
 ```
+## NOTICE
+MAKE SURE TO NOT PUSH THE TOKEN INTO THE INTERNET!
