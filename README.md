@@ -15,5 +15,7 @@ to launch bot run
 ```sh
 node .
 ```
+
+Now once the bot is on your server and is online you can run the commands starting with the prefix specified and if the command file exists it will execute the code.
 ## NOTICE
 MAKE SURE TO NOT PUSH THE TOKEN INTO THE INTERNET!
